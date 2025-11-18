@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { NavbarComponent } from '../components/navbar/navbar';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true,
+  imports: [
+    CommonModule,
+    NavbarComponent 
+  ],
   templateUrl: './home.page.html',
-  styleUrl: './home.page.scss',
+  styleUrls: ['./home.page.scss']
 })
-export class HomePage {
-
-}
+export class HomePage {}

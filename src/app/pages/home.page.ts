@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../components/navbar/navbar';
 import { HeroSectionComponent } from '../components/hero-section/hero-section';
+import { AboutSectionComponent } from '../components/about-section/about-section';
+
 
 
 @Component({
@@ -10,7 +12,8 @@ import { HeroSectionComponent } from '../components/hero-section/hero-section';
   imports: [
     CommonModule,
     NavbarComponent,
-    HeroSectionComponent
+    HeroSectionComponent,
+    AboutSectionComponent
   ],
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss']

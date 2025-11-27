@@ -5,6 +5,10 @@ import { HeroSectionComponent } from '../components/hero-section/hero-section';
 import { AboutSectionComponent } from '../components/about-section/about-section';
 import { ServicesSectionComponent } from '../components/services-section/services-section';
 import { PortfolioSectionComponent } from '../components/portfolio-section/portfolio-section';
+import { FaqSectionComponent } from '../components/faq-section/faq-section';
+
+
+
 
 @Component({
   selector: 'app-home', // ✅ fixed here
@@ -15,7 +19,8 @@ import { PortfolioSectionComponent } from '../components/portfolio-section/portf
     HeroSectionComponent,
     AboutSectionComponent,
     ServicesSectionComponent,
-    PortfolioSectionComponent
+    PortfolioSectionComponent,
+    FaqSectionComponent
   ],
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss']

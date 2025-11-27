@@ -1,0 +1,49 @@
+<section class="faq-section">
+
+  <div class="faq-header">
+    <p class="section-label">FAQ'S</p>
+    <h2>FREQUENTLY ASKED QUESTIONS</h2>
+  </div>
+
+  <hr />
+
+  <div class="faq-grid">
+
+    <div class="faq-column">
+      <mat-accordion multi>
+
+        <ng-container *ngFor="let faq of faqsLeft">
+          <mat-expansion-panel>
+  <mat-expansion-panel-header hideToggle>
+    <mat-panel-title>{{ faq.question }}</mat-panel-title>
+    
+  </mat-expansion-panel-header>
+
+  <p>{{ faq.answer }}</p>
+</mat-expansion-panel>
+
+        </ng-container>
+
+      </mat-accordion>
+    </div>
+
+    <div class="faq-column">
+      <mat-accordion multi>
+
+        <ng-container *ngFor="let faq of faqsRight">
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>{{ faq.question }}</mat-panel-title>
+              
+            </mat-expansion-panel-header>
+
+            <p>{{ faq.answer }}</p>
+          </mat-expansion-panel>
+        </ng-container>
+
+      </mat-accordion>
+    </div>
+
+  </div>
+
+</section>

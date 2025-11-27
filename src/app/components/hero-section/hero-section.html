@@ -1,0 +1,37 @@
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-top">
+      <img src="/circles.png" alt="Decorative Circles" class="circle-decoration-img" />
+
+      <div class="text-block">
+        <p class="subheading">STUNNING PHOTOGRAPHY BY</p>
+        <h1>DAMIEN BRAUN</h1>
+      </div>
+
+      <div class="cta-split">
+        <div class="cta-line">
+          <span>LET’S</span>
+          <button class="circle-btn">
+            <img src="/Icon-arrow.png" alt="Arrow Icon" />
+          </button>
+        </div>
+        <span class="cta-line bottom">WORK TOGETHER</span>
+      </div>
+    </div>
+
+    <div class="category-scroll">
+      <div class="category-item" *ngFor="let category of categories">
+        ✴ {{ category }}
+      </div>
+    </div>
+
+    <div class="image-collage">
+      <img src="/homepage1.png" class="img img1" alt="Image 1" />
+      <img src="/homepage2.png" class="img img2" alt="Image 2" />
+      <img src="/homepage3.png" class="img img3" alt="Image 3" />
+      <img src="/homepage4.png" class="img img4" alt="Image 4" />
+      <img src="/homepage5.png" class="img img5" alt="Image 5" />
+      <img src="/homepage6.png" class="img img6" alt="Image 6" />
+    </div>
+  </div>
+</section>

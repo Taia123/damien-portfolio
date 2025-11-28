@@ -7,12 +7,13 @@ import { ServicesSectionComponent } from '../components/services-section/service
 import { PortfolioSectionComponent } from '../components/portfolio-section/portfolio-section';
 import { FaqSectionComponent } from '../components/faq-section/faq-section';
 import { TestimonialSectionComponent } from '../components/testimonial-section/testimonial-section';
+import { FooterSectionComponent } from '../components/footer-section/footer-section';
 
 
 
 
 @Component({
-  selector: 'app-home', // ✅ fixed here
+  selector: 'app-home', 
   standalone: true,
   imports: [
     CommonModule,
@@ -22,7 +23,8 @@ import { TestimonialSectionComponent } from '../components/testimonial-section/t
     ServicesSectionComponent,
     PortfolioSectionComponent,
     FaqSectionComponent,
-    TestimonialSectionComponent
+    TestimonialSectionComponent,
+    FooterSectionComponent
   ],
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss']

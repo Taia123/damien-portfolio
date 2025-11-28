@@ -1,0 +1,59 @@
+<section class="testimonial-section">
+  <div class="testimonial-header">
+
+    <div class="header-left">
+      <p class="section-label">TESTIMONIALS</p>
+      <h2>WHAT MY CLIENTS SAY</h2>
+
+      <div class="review-count">
+        <span>Total Reviews</span>
+        <strong>{{ totalReviews }}</strong>
+      </div>
+    </div>
+
+    <div class="header-controls">
+      <div class="arrow-nav">
+        <button class="arrow-btn">
+          <mat-icon>chevron_left</mat-icon>
+        </button>
+        <button class="arrow-btn">
+          <mat-icon>chevron_right</mat-icon>
+        </button>
+      </div>
+
+      <button mat-button class="view-all-btn">
+        View All Testimonials →
+      </button>
+    </div>
+
+  </div>
+
+  <hr />
+<div class="testimonial-grid">
+  <div class="testimonial-card" *ngFor="let review of testimonials">
+    <div class="card-top">
+      <div class="client-info">
+        <h4>{{ review.name }}</h4>
+        <p>{{ review.location }}</p>
+      </div>
+
+     <div class="social-wrapper">
+  <button><img src="/facebook.png" alt="Facebook" /></button>
+  <button><img src="/twitter.png" alt="Twitter" /></button>
+  <button><img src="/linkedin.png" alt="LinkedIn" /></button>
+</div>
+
+
+    </div>
+
+    <div class="stars">
+      <ng-container *ngFor="let _ of [].constructor(review.stars)">
+        <mat-icon style="color: gold;">star</mat-icon>
+      </ng-container>
+    </div>
+
+    <p class="review-text">{{ review.text }}</p>
+  </div>
+</div>
+
+</section>

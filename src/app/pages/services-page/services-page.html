@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+
+<section class="services-hero">
+  <div class="services-hero-text">
+    <p class="label">SERVICES</p>
+    <h1>DIVERSE PHOTOGRAPHY OFFERINGS</h1>
+    <p class="description">
+      Unlock the full spectrum of professional photography services tailored to your vision.
+      From timeless portraits to captivating event coverage, I bring a unique blend of creativity
+      and technical expertise to each project.
+    </p>
+  </div>
+
+  <div class="hero-image-container">
+    <img src="/studio.png" alt="Studio" class="clipped-hero-image" />
+    <div class="scroll-left-icon">
+      <span class="star-icon">✦</span>
+    </div>
+    <div class="scroll-right-text">
+      <p>SCROLL DOWN TO SEE</p>
+      <p>ALL SERVICES</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="service-section" *ngFor="let service of sections">
+    <div class="service-header">
+      <div class="text-content">
+        <h2>{{ service.title }}</h2>
+        <p>{{ service.description }}</p>
+        <a [routerLink]="service.linkUrl" class="service-link">
+          {{ service.linkText }} ↗
+        </a>
+      </div>
+      <div class="image-wrapper">
+        <img [src]="service.image" [alt]="service.imageAlt" />
+        <div class="slider-controls">
+          <button>←</button>
+          <button>→</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="plans">
+      <div class="plan-card" *ngFor="let plan of service.plans">
+        <div class="plan-info">
+          <h4>{{ plan.title }}</h4>
+          <h2>{{ plan.price }}</h2>
+          <a href="#" class="call-link">{{ plan.buttonText }} ↗</a>
+        </div>
+        <ul class="features">
+          <li *ngFor="let feature of plan.features">
+            <span class="icon">✦</span>
+            {{ feature }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+<app-faq-section></app-faq-section>
+
+<app-footer-section></app-footer-section>

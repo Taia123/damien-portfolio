@@ -111,3 +111,79 @@
     object-fit: cover;
   }
 }
+.biography-section {
+    margin-top: 50px;
+  padding: 4rem 3rem;
+  background-color: #0e0e10;
+  color: #797C86;
+  border-top: 1px solid #333;
+
+  .bio-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #797C86;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+  }
+}
+.timeline-section {
+  padding: 4rem 5rem;
+  background-color: #0e0e10;
+  color: white;
+
+  .timeline-label {
+    color: #a1a1a1;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+  .timeline-card {
+    background: linear-gradient(to bottom right, #111, #141414);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #1e1e1e;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      color: #797C86;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #aaa;
+      line-height: 1.4;
+    }
+  }
+}

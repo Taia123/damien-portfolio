@@ -3,6 +3,8 @@ import { HomePage } from './pages/home.page';
 import { AboutPage } from './pages/about-page/about-page'; 
 import { PortfolioPageComponent } from './pages/portfoliopage/portfolio-page';
 import { ServicesPageComponent } from './pages/services-page/services-page';
+import { ContactPageComponent } from './pages/contact-page/contact-page';
+
 
 
 
@@ -19,6 +21,10 @@ export const routes: Routes = [
 },
   { path: 'services', 
     component: ServicesPageComponent }, 
+
+  { path: 'contact',
+  component: ContactPageComponent }
+
 
   
 ];

@@ -1,0 +1,117 @@
+<app-navbar></app-navbar>
+
+<section class="contact-hero">
+  <div class="image-wrapper">
+    <img src="/photos.png" alt="Photographer taking a photo" class="clipped-image" />
+   <div class="social-icons">
+  <div class="icon-wrapper">
+    <img src="/facebook.png" alt="Facebook" />
+  </div>
+  <div class="icon-wrapper">
+    <img src="/twitter.png" alt="Twitter" />
+  </div>
+  <div class="icon-wrapper">
+    <img src="/linkedin.png" alt="LinkedIn" />
+  </div>
+</div>
+
+    <div class="scroll-down">
+      <p>SCROLL DOWN TO SEND</p>
+      <p>ME A MESSAGE</p>
+    </div>
+  </div>
+
+  <div class="text-box">
+    <p class="label">CONTACT ME</p>
+    <h1>GET IN TOUCH WITH ME</h1>
+    <p class="description">
+      Step into a world of timeless photography with Damien Braun. Explore our range of photography services, each crafted to tell your unique story through captivating images. Whether it’s the magic of portraits, the emotion of events, or the allure of commercial photography, we’re here to bring your vision to life.
+    </p>
+  </div>
+</section>
+
+
+<section class="contact-info-section">
+  <div class="left-text">
+    <h2>CONTACT INFORMATION</h2>
+    <p>
+      Feel free to reach out to us through various channels. We are
+      available by phone, email, and social media for your convenience.
+    </p>
+  </div>
+
+  <div class="right-info">
+    <a href="tel:+11234567890" target="_blank" class="info-link">
+      +1-123-456-7890 <span class="arrow">↗</span>
+    </a>
+    <a href="mailto:info@damienbraunphotography.com" target="_blank" class="info-link">
+      info@damienbraunphotography.com <span class="arrow">↗</span>
+    </a>
+  </div>
+</section>
+
+
+<section class="contact-form-section">
+  <div class="form-grid">
+
+    <div class="form-intro">
+      <h2>SEND ME A MESSAGE</h2>
+      <p>
+        Have a specific inquiry or message for us? Please use the contact form below, 
+        and we'll get back to you promptly.
+      </p>
+    </div>
+
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form-right">
+
+      <div class="form-field">
+        <label for="firstName">First Name</label>
+        <input id="firstName" formControlName="firstName" type="text" placeholder="FIRST NAME" />
+        <p class="error" *ngIf="contactForm.get('firstName')?.touched && contactForm.get('firstName')?.invalid">
+          First name must be at least 2 characters.
+        </p>
+      </div>
+
+      <div class="form-field">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" formControlName="lastName" type="text" placeholder="LAST NAME" />
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" type="email" placeholder="EMAIL ADDRESS" />
+        <p class="error" *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['email']">
+          Please enter a valid email address.
+        </p>
+      </div>
+
+      <div class="form-field">
+        <label for="phone">Phone Number</label>
+        <input id="phone" formControlName="phone" type="text" placeholder="PHONE NUMBER" />
+        <p class="error" *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.invalid">
+          Enter a valid phone number.
+        </p>
+      </div>
+
+      <div class="form-field full-width">
+        <label for="message">Your Message</label>
+        <textarea id="message" formControlName="message" rows="4" placeholder="MESSAGE"></textarea>
+        <p class="error" *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.errors?.['maxlength']">
+          Message must be under 300 characters.
+        </p>
+      </div>
+
+      <div class="form-submit full-width">
+        <span class="send-text">SEND MESSAGE</span>
+        <button type="submit" [disabled]="contactForm.invalid">
+          <span class="arrow">↗</span>
+        </button>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+
+<app-testimonial-section></app-testimonial-section>
+<app-footer-section></app-footer-section>
